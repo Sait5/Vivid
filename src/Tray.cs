@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Linq;
 using WinForms = System.Windows.Forms;
 
-namespace Backdrop
+namespace Vivid
 {
     class Tray : IDisposable
     {
@@ -17,7 +17,7 @@ namespace Backdrop
             icon = new WinForms.NotifyIcon();
             try { icon.Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetExecutingAssembly().Location); }
             catch { icon.Icon = SystemIcons.Application; }
-            icon.Text = "Backdrop — живые обои";
+            icon.Text = "Vivid — живые обои";
 
             var menu = new WinForms.ContextMenuStrip();
             menu.Renderer = new WinForms.ToolStripProfessionalRenderer(new DarkColors());

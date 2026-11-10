@@ -12,7 +12,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
-namespace Backdrop
+namespace Vivid
 {
     // Файлы сцены: scene.pkg (архив WE), распакованная папка проекта и общие ассеты Wallpaper Engine.
     class ScenePackage

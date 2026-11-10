@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
 
-namespace Backdrop
+namespace Vivid
 {
     // Мини-среда для скриптов текстовых слоёв Wallpaper Engine (часы, дата и т.п.)
     // на движке Chakra, который встроен в Windows (chakra.dll). Работает только в потоке интерфейса.

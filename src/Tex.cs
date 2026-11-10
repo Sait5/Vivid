@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Backdrop
+namespace Vivid
 {
     // Чтение текстур Wallpaper Engine (.tex): вложенные PNG/JPG, сырые RGBA/R8/RG88, DXT1/3/5, сжатие LZ4.
     class TexImage

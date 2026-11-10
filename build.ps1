@@ -1,4 +1,4 @@
-﻿# Build Backdrop with the C# compiler that ships with Windows (.NET Framework 4.8).
+﻿# Build Vivid with the C# compiler that ships with Windows (.NET Framework 4.8).
 # Nothing to install: run   powershell -ExecutionPolicy Bypass -File build.ps1
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
@@ -21,7 +21,7 @@ $facade = { param($n) (Get-ChildItem (Join-Path $gac $n) -Recurse -Filter "$n.dl
 
 & $csc /nologo /codepage:65001 /optimize+ /platform:x64 /target:winexe `
   /win32icon:"$root\assets\app.ico" /win32manifest:"$root\src\app.manifest" `
-  /out:"$root\bin\Backdrop.exe" `
+  /out:"$root\bin\Vivid.exe" `
   /r:"$wpf\PresentationCore.dll" /r:"$wpf\PresentationFramework.dll" /r:"$wpf\WindowsBase.dll" `
   /r:System.Xaml.dll /r:System.Drawing.dll /r:System.Windows.Forms.dll /r:System.Web.Extensions.dll /r:System.Core.dll `
   /r:System.Numerics.dll /r:"$(& $facade 'System.Numerics.Vectors')" /r:"$(& $facade 'System.Runtime')" `
@@ -29,6 +29,6 @@ $facade = { param($n) (Get-ChildItem (Join-Path $gac $n) -Recurse -Filter "$n.dl
   /r:"$wm\Windows.Foundation.winmd" /r:"$wm\Windows.UI.winmd" /r:"$wm\Windows.Media.winmd" /r:"$wm\Windows.Graphics.winmd" `
   "$root\src\*.cs"
 if ($LASTEXITCODE -ne 0) { throw 'build failed' }
-Write-Host "OK: $root\bin\Backdrop.exe"
+Write-Host "OK: $root\bin\Vivid.exe"
 
 

@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Backdrop
+namespace Vivid
 {
     // Частицы сцены WE (пепел, снег, искры, пыль): эмиттеры, инициализаторы и операторы в 2D.
     class ParticleSystem

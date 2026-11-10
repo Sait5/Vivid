@@ -7,12 +7,12 @@ using System.Windows.Threading;
 using Microsoft.Win32;
 using WinForms = System.Windows.Forms;
 
-namespace Backdrop
+namespace Vivid
 {
     static class Msg
     {
-        public static readonly uint Show = Native.RegisterWindowMessage("Backdrop.Wallpaper.Show");
-        public static readonly uint Quit = Native.RegisterWindowMessage("Backdrop.Wallpaper.Quit");
+        public static readonly uint Show = Native.RegisterWindowMessage("Vivid.Wallpaper.Show");
+        public static readonly uint Quit = Native.RegisterWindowMessage("Vivid.Wallpaper.Quit");
         public static readonly uint TaskbarCreated = Native.RegisterWindowMessage("TaskbarCreated");
     }
 
@@ -40,7 +40,7 @@ namespace Backdrop
             Lib = Library.Load();
             if (string.IsNullOrEmpty(Cfg.Accent) || !Theme.SetAccent(Cfg.Accent)) Cfg.Accent = Theme.AccentHex;
 
-            var p = new HwndSourceParameters("Backdrop.Messages") { WindowStyle = Native.WS_POPUP, Width = 0, Height = 0 };
+            var p = new HwndSourceParameters("Vivid.Messages") { WindowStyle = Native.WS_POPUP, Width = 0, Height = 0 };
             msgWindow = new HwndSource(p);
             msgWindow.AddHook(Hook);
 
@@ -351,7 +351,7 @@ namespace Backdrop
         {
             get
             {
-                try { using (var k = Registry.CurrentUser.OpenSubKey(RunKey)) return k != null && k.GetValue("Backdrop") != null; }
+                try { using (var k = Registry.CurrentUser.OpenSubKey(RunKey)) return k != null && k.GetValue("Vivid") != null; }
                 catch { return false; }
             }
             set
@@ -360,8 +360,8 @@ namespace Backdrop
                 {
                     using (var k = Registry.CurrentUser.CreateSubKey(RunKey))
                     {
-                        if (value) k.SetValue("Backdrop", "\"" + System.Reflection.Assembly.GetExecutingAssembly().Location + "\" /tray");
-                        else k.DeleteValue("Backdrop", false);
+                        if (value) k.SetValue("Vivid", "\"" + System.Reflection.Assembly.GetExecutingAssembly().Location + "\" /tray");
+                        else k.DeleteValue("Vivid", false);
                     }
                 }
                 catch (Exception e) { Log.Write(e); }

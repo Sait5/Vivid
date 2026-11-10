@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace Backdrop
+namespace Vivid
 {
     public class Item
     {
@@ -107,7 +107,7 @@ namespace Backdrop
 
     static class Store
     {
-        public static readonly string Dir = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Backdrop");
+        public static readonly string Dir = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Vivid");
         public static string ThumbDir { get { return System.IO.Path.Combine(Dir, "thumbs"); } }
 
         static JavaScriptSerializer Json() { var j = new JavaScriptSerializer(); j.MaxJsonLength = int.MaxValue; return j; }

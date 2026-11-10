@@ -7,7 +7,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-// Иконка Backdrop: «обои в окне» — тёмная плитка, оранжевый закатный экран, бледный полумесяц, тёмные холмы.
+// Иконка Vivid: «обои в окне» — тёмная плитка, оранжевый закатный экран, бледный полумесяц, тёмные холмы.
 // Рисуется средствами WPF (мягкое свечение и объём), сохраняется как .ico (PNG внутри) + app.png.
 static class MakeIcon
 {

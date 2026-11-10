@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Backdrop
+namespace Vivid
 {
     static class Native
     {
@@ -70,7 +70,7 @@ namespace Backdrop
         // Передать пути файлов уже запущенной копии программы
         public static void SendFiles(string[] files)
         {
-            IntPtr target = FindWindow(null, "Backdrop.Messages");
+            IntPtr target = FindWindow(null, "Vivid.Messages");
             if (target == IntPtr.Zero) return;
             byte[] data = Encoding.UTF8.GetBytes(string.Join("\n", files));
             IntPtr mem = Marshal.AllocHGlobal(data.Length);

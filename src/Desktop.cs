@@ -1,6 +1,6 @@
 using System;
 
-namespace Backdrop
+namespace Vivid
 {
     // Встраивание окна обоев за иконки рабочего стола.
     // Два режима Windows:

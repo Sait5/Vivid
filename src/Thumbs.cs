@@ -6,9 +6,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
-namespace Backdrop
+namespace Vivid
 {
-    // Превью для карточек: кадр из видео / первый кадр GIF / уменьшенная картинка. Кэшируются в %APPDATA%\Backdrop\thumbs.
+    // Превью для карточек: кадр из видео / первый кадр GIF / уменьшенная картинка. Кэшируются в %APPDATA%\Vivid\thumbs.
     static class Thumbs
     {
         const int W = 480, H = 270;

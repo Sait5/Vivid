@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows;
 
-namespace Backdrop
+namespace Vivid
 {
     static class Program
     {
@@ -28,7 +28,7 @@ namespace Backdrop
             var files = args.Where(a => !a.StartsWith("/") && (System.IO.File.Exists(a) || System.IO.Directory.Exists(a))).Select(System.IO.Path.GetFullPath).ToArray();
 
             bool created;
-            var mutex = new Mutex(true, "Backdrop.Wallpaper.Instance", out created);
+            var mutex = new Mutex(true, "Vivid.Wallpaper.Instance", out created);
             if (!created)
             {
                 // уже запущена — передаём ей файлы или просим показать окно (или закрыться)
@@ -37,6 +37,7 @@ namespace Backdrop
                 return 0;
             }
             if (quit) return 0;
+            Migrate.FromOldName();
 
             AppDomain.CurrentDomain.UnhandledException += delegate(object s, UnhandledExceptionEventArgs e) { Log.Write("FATAL " + e.ExceptionObject); };
             var app = new Application { ShutdownMode = ShutdownMode.OnExplicitShutdown };

@@ -6,7 +6,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
-namespace Backdrop
+namespace Vivid
 {
     // Проигрыватель GIF: кадры собираются один раз (с учётом смещений и способа очистки), потом просто листаются.
     class GifAnimator

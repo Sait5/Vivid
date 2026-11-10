@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Media;
 
-namespace Backdrop
+namespace Vivid
 {
     // Стиль «кинотеатр»: живые обои на весь фон окна, спокойные стеклянные элементы и ОДИН акцентный цвет,
     // который пользователь выбирает сам (Настройки → Цвет). Никаких градиентов.

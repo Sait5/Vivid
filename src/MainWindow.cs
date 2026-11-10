@@ -16,7 +16,7 @@ using System.Windows.Shell;
 using System.Windows.Threading;
 using WinForms = System.Windows.Forms;
 
-namespace Backdrop
+namespace Vivid
 {
     // Окно-«кинотеатр»: выбранные обои живут на весь фон окна, поверх — название, кнопки и лента коллекции.
     class MainWindow : Window
@@ -53,7 +53,7 @@ namespace Backdrop
         {
             this.core = core;
             Resources.MergedDictionaries.Add(Theme.Build());
-            Title = "Backdrop — живые обои";
+            Title = "Vivid — живые обои";
             Width = 1280; Height = 800; MinWidth = 1000; MinHeight = 640;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             Background = Theme.Bg; Foreground = Theme.Text;
@@ -187,7 +187,7 @@ namespace Backdrop
 
             var logo = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center };
             logo.Children.Add(new Ellipse { Width = 8, Height = 8, Fill = Theme.Accent, VerticalAlignment = VerticalAlignment.Center, Margin = new Thickness(0, 1, 12, 0) });
-            logo.Children.Add(new TextBlock { Text = "Backdrop", FontFamily = Theme.Head, FontWeight = FontWeights.SemiBold, FontSize = 16, VerticalAlignment = VerticalAlignment.Center });
+            logo.Children.Add(new TextBlock { Text = "Vivid", FontFamily = Theme.Head, FontWeight = FontWeights.SemiBold, FontSize = 16, VerticalAlignment = VerticalAlignment.Center });
             g.Children.Add(logo);
 
             var right = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center };
@@ -702,12 +702,12 @@ namespace Backdrop
                 Switch("Одни обои на всех мониторах", "Выключи, чтобы ставить разные обои на каждый монитор", cfg.SameOnAll, v => { cfg.SameOnAll = v; core.SettingsChanged(); core.Rebuild(); BuildMonitorRow(); UpdateApplyButton(); })));
 
             col.Children.Add(Section("СИСТЕМА", null,
-                Switch("Запускать вместе с Windows", "Обои включаются сами при старте компьютера", Core.Autostart, v => { Core.Autostart = v; ShowToast(v ? "Готово — Backdrop будет запускаться вместе с Windows." : "Автозапуск выключен."); }),
+                Switch("Запускать вместе с Windows", "Обои включаются сами при старте компьютера", Core.Autostart, v => { Core.Autostart = v; ShowToast(v ? "Готово — Vivid будет запускаться вместе с Windows." : "Автозапуск выключен."); }),
                 Switch("Показывать окно при включении компьютера", "Если выключено — программа тихо сидит в трее, окно открывается по значку", cfg.ShowOnStartup, v => { cfg.ShowOnStartup = v; cfg.Save(); })));
 
             col.Children.Add(new TextBlock
             {
-                Text = "Backdrop " + Program.Version + " — бесплатно и с открытым кодом. Файлы обоев никуда не копируются: программа только читает их с того места, где они лежат.",
+                Text = "Vivid " + Program.Version + " — бесплатно и с открытым кодом. Файлы обоев никуда не копируются: программа только читает их с того места, где они лежат.",
                 Foreground = Theme.Faint, FontSize = 12, TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 6, 0, 0), LineHeight = 19
             });
             dock.Children.Add(sv);

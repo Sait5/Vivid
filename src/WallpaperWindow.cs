@@ -13,7 +13,7 @@ using Windows.Media.Playback;
 using Windows.UI.Composition;
 using WMedia = System.Windows.Media;
 
-namespace Backdrop
+namespace Vivid
 {
     // Системный композитор Windows (тот же механизм, что у современных приложений).
     // Только его содержимое видно на новом рабочем столе Windows 11, а анимации он крутит сам — почти без нагрузки на процессор.
@@ -176,7 +176,7 @@ namespace Backdrop
             {
                 var cp = new System.Windows.Forms.CreateParams
                 {
-                    Caption = "Backdrop wallpaper", Parent = parent, Width = Math.Max(1, b.Width), Height = Math.Max(1, b.Height),
+                    Caption = "Vivid wallpaper", Parent = parent, Width = Math.Max(1, b.Width), Height = Math.Max(1, b.Height),
                     Style = Native.WS_CHILD | Native.WS_VISIBLE | Native.WS_CLIPSIBLINGS,
                     ExStyle = Native.WS_EX_NOREDIRECTIONBITMAP | Native.WS_EX_NOACTIVATE | Native.WS_EX_TOOLWINDOW
                 };

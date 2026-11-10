@@ -6,7 +6,7 @@ using System.Text;
 using System.Web.Script.Serialization;
 using Microsoft.Win32;
 
-namespace Backdrop
+namespace Vivid
 {
     // Импорт обоев из Wallpaper Engine (папка projects\myprojects и мастерская Steam 431960)
     static class Import
